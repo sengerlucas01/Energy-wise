@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Wise | Resultados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="main-header">
+      <div class="container main-header__content">
+        <a class="logo" href="index.html">
+          <span class="logo__mark"></span>
+          <span class="logo__text">Energy Wise</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="simulacao.html">Nova Simulacao</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--results result-page" id="resultado">
+      <div class="container">
+        <div class="proposal-hero reveal-card">
+          <div>
+            <span class="proposal-eyebrow">Proposta comercial solar</span>
+            <h1>Sua simulacao esta pronta</h1>
+            <p id="resultado-descricao">Analise financeira estimada para instalacao de energia solar residencial.</p>
+          </div>
+          <div class="proposal-score">
+            <span>Viabilidade</span>
+            <strong id="viabilidade-projeto">Alta</strong>
+            <small>Baseada no payback e economia projetada</small>
+          </div>
+        </div>
+
+        <section class="executive-summary reveal-card" aria-label="Resumo executivo">
+          <div>
+            <span class="section-kicker">Resumo executivo</span>
+            <h2>Projeto com foco em reducao imediata da conta e retorno previsivel.</h2>
+            <p id="resumo-executivo">Os resultados abaixo indicam o potencial de economia, investimento e tempo estimado para recuperar o valor aplicado.</p>
+          </div>
+          <button class="btn btn--proposal" id="gerar-pdf" type="button">Gerar PDF da Proposta</button>
+        </section>
+
+        <div class="result-metrics">
+          <article class="result-card result-card--investment reveal-card">
+            <span class="result-card__icon">R$</span>
+            <span>Investimento estimado</span>
+            <strong id="investimento-total">R$ 0</strong>
+            <small>Sistema instalado e pronto para uso</small>
+          </article>
+          <article class="result-card result-card--saving reveal-card">
+            <span class="result-card__icon">%</span>
+            <span>Economia mensal estimada</span>
+            <strong id="economia-mensal">R$ 0</strong>
+            <small id="reducao-conta">0% de reducao na conta</small>
+          </article>
+          <article class="result-card result-card--payback reveal-card">
+            <span class="result-card__icon">?</span>
+            <span>Payback estimado</span>
+            <strong id="retorno-investimento">0 anos</strong>
+            <small>Tempo para retorno do investimento</small>
+          </article>
+          <article class="result-card result-card--energy reveal-card">
+            <span class="result-card__icon">kW</span>
+            <span>Producao media</span>
+            <strong id="geracao-mensal">0 kWh</strong>
+            <small>Energia estimada por mes</small>
+          </article>
+        </div>
+
+        <div class="result-layout">
+          <section class="panel-card comparison-card reveal-card">
+            <div class="panel-title">
+              <span class="section-kicker">Comparativo financeiro</span>
+              <h2>Antes e depois da energia solar</h2>
+            </div>
+            <div class="bill-comparison">
+              <div>
+                <span>Gasto atual</span>
+                <strong id="gasto-atual">R$ 0</strong>
+                <small>Conta media mensal informada</small>
+              </div>
+              <div>
+                <span>Apos instalacao</span>
+                <strong id="gasto-pos-instalacao">R$ 0</strong>
+                <small>Estimativa apos compensacao solar</small>
+              </div>
+            </div>
+            <div class="comparison-bars" aria-label="Comparacao visual da conta">
+              <div>
+                <span>Atual</span>
+                <div class="bar-track"><span id="barra-atual"></span></div>
+              </div>
+              <div>
+                <span>Com solar</span>
+                <div class="bar-track"><span id="barra-solar"></span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel-card reveal-card">
+            <div class="panel-title">
+              <span class="section-kicker">Indicadores tecnicos</span>
+              <h2>Sistema recomendado</h2>
+            </div>
+            <div class="technical-grid">
+              <div><span>Potencia</span><strong id="potencia-sistema">0 kWp</strong></div>
+              <div><span>Paineis</span><strong id="numero-paineis">0 unidades</strong></div>
+              <div><span>Area necessaria</span><strong id="area-necessaria">0 m�</strong></div>
+              <div><span>Economia anual</span><strong id="economia-anual">R$ 0</strong></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel-card reveal-card">
+          <div class="panel-title panel-title--row">
+            <div>
+              <span class="section-kicker">Projecao de economia</span>
+              <h2>Economia acumulada ao longo dos anos</h2>
+            </div>
+            <strong id="economia-vida-util" class="panel-highlight">R$ 0 em 25 anos</strong>
+          </div>
+          <div class="projection-grid">
+            <article><span>5 anos</span><strong id="economia-5-anos">R$ 0</strong></article>
+            <article><span>10 anos</span><strong id="economia-10-anos">R$ 0</strong></article>
+            <article><span>20 anos</span><strong id="economia-20-anos">R$ 0</strong></article>
+          </div>
+          <div class="proposal-chart" id="grafico-economia" aria-label="Grafico de economia acumulada"></div>
+          <p class="chart-note"><strong>Analise:</strong> o payback ocorre quando a economia acumulada supera o investimento inicial.</p>
+        </section>
+
+        <section class="panel-card reveal-card">
+          <div class="panel-title">
+            <span class="section-kicker">Resumo da Proposta Solar</span>
+            <h2>Dados para apresentacao ao cliente</h2>
+          </div>
+          <div class="proposal-summary" id="resumo-proposta">
+            <div><span>Cliente</span><strong id="cliente-nome">Nao informado</strong></div>
+            <div><span>Cidade/estado</span><strong id="cliente-cidade">Nao informado</strong></div>
+            <div><span>Consumo medio</span><strong id="consumo-medio">0 kWh</strong></div>
+            <div><span>Potencia estimada</span><strong id="resumo-potencia">0 kWp</strong></div>
+            <div><span>Valor estimado</span><strong id="resumo-investimento">R$ 0</strong></div>
+            <div><span>Retorno previsto</span><strong id="resumo-retorno">0 anos</strong></div>
+            <div><span>Economia projetada</span><strong id="resumo-economia">R$ 0</strong></div>
+            <div><span>Data da simulacao</span><strong id="data-simulacao">--/--/----</strong></div>
+          </div>
+        </section>
+
+        <section class="benefit-list benefit-list--results reveal-card">
+          <h3>Beneficios inclusos</h3>
+          <ul>
+            <li>Reducao expressiva da conta de energia</li>
+            <li>Protecao contra reajustes tarifarios</li>
+            <li>Valorizacao do imovel residencial</li>
+            <li>Energia limpa e sustentavel</li>
+            <li>Baixa necessidade de manutencao</li>
+            <li>Base para proposta comercial ao cliente</li>
+          </ul>
+        </section>
+
+        <div class="result-actions">
+          <a class="btn btn--primary" href="simulacao.html">Fazer nova simulacao</a>
+          <button class="btn btn--proposal btn--outline" id="gerar-pdf-footer" type="button">Gerar PDF da Proposta</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

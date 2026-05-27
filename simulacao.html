@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Wise | Simulacao</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="main-header">
+      <div class="container main-header__content">
+        <a class="logo" href="index.html">
+          <span class="logo__mark"></span>
+          <span class="logo__text">Energy Wise</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="simulacao.html">Simulacao</a>
+          <a href="resultados.html">Resultados</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--form" id="simulacao">
+      <div class="container container--narrow">
+        <div class="section-heading">
+          <h2>Simulacao de Energia Solar</h2>
+          <p>Preencha os dados abaixo para receber uma simulacao completa e personalizada.</p>
+        </div>
+
+        <form class="solar-form" id="solar-form">
+          <fieldset class="form-card">
+            <legend><span>⚡</span> Dados de Consumo</legend>
+            <div class="form-grid form-grid--two">
+              <label>
+                Consumo de energia (kWh) *
+                <input type="number" name="consumo" placeholder="Ex: 350" required>
+              </label>
+              <label>
+                Valor da conta atual (R$) *
+                <input type="number" name="valor" placeholder="500,00" step="0.01" required>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-card">
+            <legend><span>⌖</span> Localizacao</legend>
+            <label>
+              CEP *
+              <input type="text" name="cep" placeholder="00000-000" maxlength="9" required>
+            </label>
+            <small>Utilizamos o CEP para estimar a incidencia solar da sua regiao.</small>
+          </fieldset>
+
+          <fieldset class="form-card">
+            <legend><span>⌂</span> Dados do Imovel</legend>
+            <div class="form-grid form-grid--three">
+              <label>
+                Categoria
+                <select name="categoria">
+                  <option value="residencial">Residencial</option>
+                  <option value="comercial">Comercial</option>
+                </select>
+              </label>
+              <label>
+                Tipo de telhado
+                <select name="telhado">
+                  <option value="ceramica">Ceramica</option>
+                  <option value="metalico">Metalico</option>
+                  <option value="laje">Laje</option>
+                  <option value="fibrocimento">Fibrocimento</option>
+                </select>
+              </label>
+              <label>
+                Tipo de ligacao
+                <select name="ligacao">
+                  <option value="monofasico">Monofasico</option>
+                  <option value="bifasico">Bifasico</option>
+                  <option value="trifasico">Trifasico</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-card">
+            <legend><span>○</span> Dados do Cliente</legend>
+            <div class="form-grid form-grid--two">
+              <label>
+                Nome completo *
+                <input type="text" name="nome" placeholder="Seu nome completo" required>
+              </label>
+              <label>
+                Telefone *
+                <input type="tel" name="telefone" placeholder="(00) 00000-0000" required>
+              </label>
+            </div>
+            <div class="form-grid form-grid--two">
+              <label>
+                CPF <small>(opcional)</small>
+                <input type="text" name="cpf" placeholder="000.000.000-00" maxlength="14">
+              </label>
+              <label>
+                Cidade/Estado <small>(opcional)</small>
+                <input type="text" name="cidadeEstado" placeholder="Ex: Sorocaba/SP">
+              </label>
+            </div>
+          </fieldset>
+
+          <button class="btn btn--submit" type="submit">Calcular Simulacao <span aria-hidden="true">→</span></button>
+          <p class="required-note">* Campos obrigatorios</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
